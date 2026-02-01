@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FR2 Temp Mail</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#020617;
+  color:white;
+}
+header{
+  padding:20px;
+  text-align:center;
+  background:#000;
+}
+button{
+  padding:12px 20px;
+  border:none;
+  background:#22c55e;
+  color:black;
+  font-size:16px;
+  cursor:pointer;
+  border-radius:6px;
+}
+.box{
+  max-width:600px;
+  margin:40px auto;
+  background:#020617;
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+  border:1px solid #1e293b;
+}
+input{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  font-size:16px;
+  border-radius:6px;
+  border:none;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>FR2 Temporary Email</h1>
+  <p>Fast • Free • Anonymous</p>
+</header>
+
+<div class="box">
+  <h2>Your Temporary Email</h2>
+  <input id="email" readonly>
+  <br><br>
+  <button onclick="generate()">Generate Email</button>
+</div>
+
+<div class="box">
+  <h2>Premium Email</h2>
+  <p>Custom email for business & long use</p>
+  <button onclick="contact()">Contact on WhatsApp</button>
+</div>
+
+<footer>
+  <p>© 2026 FR2 | Demo & testing purpose only</p>
+</footer>
+
+<script>
+function generate(){
+  let chars = "abcdefghijklmnopqrstuvwxyz1234567890";
+  let name = "";
+  for(let i=0;i<8;i++){
+    name += chars[Math.floor(Math.random()*chars.length)];
+  }
+  document.getElementById("email").value = name + "@fr2.com";
+}
+
+function contact(){
+  window.location.href = "https://wa.me/923000000000";
+}
+</script>
+
+</body>
+</html>
